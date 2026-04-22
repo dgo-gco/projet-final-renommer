@@ -1,0 +1,90 @@
+name: "User Story"
+description: "Créer un item du backlog (fonctionnalité, bug, technique)"
+title: "[US] "
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: "Type"
+      description: "Catégorie de cette User Story"
+      options:
+        - "Fonctionnalité"
+        - "Bug"
+        - "Technique"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "User Story"
+      description: "Exprimez le besoin du point de vue de l'utilisateur ou de l'équipe"
+      placeholder: |
+        **En tant que** [rôle/persona],
+        **je veux** [action/fonctionnalité],
+        **afin de** [bénéfice/valeur métier].
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Critères d'acceptation (Definition of Done)"
+      description: "Conditions vérifiables pour considérer cette story comme terminée"
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: "Story Points"
+      description: "Estimation de la complexité (Fibonacci)"
+      options:
+        - "1 - Trivial"
+        - "2 - Simple"
+        - "3 - Moyen"
+        - "5 - Complexe"
+        - "8 - Très complexe"
+        - "13 - À découper"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Priorité (MoSCoW)"
+      options:
+        - "Must have - Indispensable"
+        - "Should have - Important"
+        - "Could have - Confort"
+        - "Won't have - Hors périmètre"
+    validations:
+      required: true
+
+  - type: input
+    id: epic
+    attributes:
+      label: "Epic"
+      placeholder: "Ex: Authentification, Paiement..."
+    validations:
+      required: false
+
+  - type: input
+    id: sprint
+    attributes:
+      label: "Sprint"
+      placeholder: "Ex: Sprint 1"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Contexte additionnel"
+      description: "Notes techniques, étapes de reproduction (bug), maquettes, dépendances..."
+    validations:
+      required: false

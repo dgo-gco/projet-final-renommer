@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Documentation du projet"
+    url: https://github.com/dgo-gco/projet-final-renommer/wiki
+    about: "Consultez la documentation avant de créer un ticket"
