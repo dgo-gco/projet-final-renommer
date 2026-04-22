@@ -1,6 +1,8 @@
 name: "User Story"
 description: "Créer un item du backlog (fonctionnalité, bug, technique)"
 title: "[US] "
+labels: []
+assignees: []
 body:
   - type: dropdown
     id: type
@@ -39,21 +41,6 @@ body:
       required: true
 
   - type: dropdown
-    id: story_points
-    attributes:
-      label: "Story Points"
-      description: "Estimation de la complexité (Fibonacci)"
-      options:
-        - "1 - Trivial"
-        - "2 - Simple"
-        - "3 - Moyen"
-        - "5 - Complexe"
-        - "8 - Très complexe"
-        - "13 - À découper"
-    validations:
-      required: true
-
-  - type: dropdown
     id: priority
     attributes:
       label: "Priorité (MoSCoW)"
@@ -64,27 +51,3 @@ body:
         - "Won't have - Hors périmètre"
     validations:
       required: true
-
-  - type: input
-    id: epic
-    attributes:
-      label: "Epic"
-      placeholder: "Ex: Authentification, Paiement..."
-    validations:
-      required: false
-
-  - type: input
-    id: sprint
-    attributes:
-      label: "Sprint"
-      placeholder: "Ex: Sprint 1"
-    validations:
-      required: false
-
-  - type: textarea
-    id: context
-    attributes:
-      label: "Contexte additionnel"
-      description: "Notes techniques, étapes de reproduction (bug), maquettes, dépendances..."
-    validations:
-      required: false
